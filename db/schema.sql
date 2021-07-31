@@ -15,8 +15,4 @@ CREATE TABLE users(
 --     api_id INT,
 --     notes,
 --     rating,
-
 -- );
-
-
-
