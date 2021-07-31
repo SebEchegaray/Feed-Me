@@ -10,16 +10,16 @@ const logger = require("./middlewares/logger");
 const errorHandler = require("./middlewares/error_handler");
 const usersController = require("./controllers/users_controller");
 
-app.use(express.json());
-app.use(logger);
-app.use(express.static("client"));
-
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
 
+app.use(logger);
+app.use(express.json());
+app.use(express.static("client"));
+
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World!")
 });
 
 app.use("/api/users/", usersController);
