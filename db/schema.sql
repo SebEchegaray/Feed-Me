@@ -16,3 +16,9 @@ CREATE TABLE users(
 --     notes,
 --     rating,
 -- );
+
+-- CREATE TABLE fridge_items(
+--     id SERIAL PRIMARY KEY,
+--     api_id INT,
+--     count INT
+-- )
