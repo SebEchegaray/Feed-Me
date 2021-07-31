@@ -25,4 +25,14 @@ Depending on how you decided to split the work, this goal is more of a guide:
             - Navbar
         - CSS
 
-    [] Starting work on one of your user stories. -->
+    [] Starting work on one of your user stories.
+
+
+    [] Sessions controller -> make the session available to the request object.
+        - Create (Post, req.session.user_id === 5)
+        - Get (send json response back of the req)
+        - Delete ()
+
+        - Use GET in renderHeaderNav to check if user is logged in
+
+     -->
