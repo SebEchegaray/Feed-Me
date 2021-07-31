@@ -13,6 +13,7 @@ if (process.env.NODE_ENV === "production") {
     database: "feed_me",
     password: process.env.DB_PASSWORD,
     user: process.env.DB_USERNAME,
+    host: process.env.DB_HOST,
   });
 }
 
