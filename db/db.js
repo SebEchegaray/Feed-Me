@@ -1,18 +1,19 @@
-const pg = require('pg')
+const pg = require("pg");
 
 let pool;
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === "production") {
   pool = new pg.Pool({
     connectionString: process.env.DATABASE_URL,
     ssl: {
-      rejectUnauthorized: false
-    }
-  })
+      rejectUnauthorized: false,
+    },
+  });
 } else {
   pool = new pg.Pool({
-    database: 'my_local_database_name',
-    password: 'optional_password'
-  })
+    database: "feed_me",
+    password: process.env.DB_PASSWORD,
+    user: process.env.DB_USERNAME,
+  });
 }
 
-module.exports = pool
+module.exports = pool;

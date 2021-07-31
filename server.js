@@ -1,13 +1,24 @@
-const express = require('express')
+const express = require("express");
 
-const app = express()
+const app = express();
 const port = process.env.PORT || 8080;
 
+const logger = require("./middlewares/logger");
+const errorHandler = require("./middlewares/error_handler");
+const usersController = require("./controllers/users_controller");
+
+app.use(express.json());
+app.use(logger);
+app.use(express.static("client"));
 
 app.listen(port, () => {
-    console.log(`listening on port ${port}`)
-})
+  console.log(`listening on port ${port}`);
+});
 
-app.get('/', (req, res) => {
-    res.send("Hello World!")
-})
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.use("/api/users/", usersController);
+
+app.use(errorHandler);
