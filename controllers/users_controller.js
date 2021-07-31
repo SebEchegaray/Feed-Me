@@ -12,7 +12,7 @@ router.post("/", validateUser, (req, res) => {
   const password = req.body.password;
 
   // User.create returns a promise
-  User.create(name, email, password).then((user) => {
+User.create(name, email, password).then((user) => {
     res.json({
       message: "User created succesfully",
       user: user,
