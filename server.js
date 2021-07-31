@@ -10,9 +10,10 @@ const logger = require("./middlewares/logger");
 const errorHandler = require("./middlewares/error_handler");
 const usersController = require("./controllers/users_controller");
 
-app.use(express.json());
+
 app.use(logger);
 app.use(express.static("client"));
+app.use(express.json());
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
