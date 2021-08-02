@@ -17,14 +17,11 @@ const sess = {
     cookie : {}
 }
 
-<<<<<<< HEAD
 app.use(logger);
 app.use(express.static("client"));
 app.use(express.json());
 app.use(session(sess));
 
-=======
->>>>>>> 06b096016b7819f618079415ccde5fbf12a09be7
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
