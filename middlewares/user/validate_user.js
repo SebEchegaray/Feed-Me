@@ -1,7 +1,7 @@
 const User = require("../../models/user");
 const { isBlank, validationError } = require("../validation_utils");
 
-// Middleware for validating user inputs before createing a user in the db
+// Middleware for validating user inputs before creating a user in the db
 const validateUser = (req, res, next) => {
   const name = req.body.name;
   const email = req.body.email;
