@@ -6,8 +6,11 @@ function renderHeaderNav() {
       //If logged in
       navbar.innerHTML = `
           <nav>
+            <h1>Fridge</h1>
+            <h1>Recipe Book</h1>
             <h1>Feed Me</h1>
             <ul>
+                <li> </li>
                 <li class="material-icons logout">logout</li>
             </ul>
           </nav>
@@ -16,6 +19,7 @@ function renderHeaderNav() {
       //If not logged in
       navbar.innerHTML = `
           <nav>
+            <h1>Fridge</h1>
             <h1>Feed Me</h1>
             <ul>
                 <li class="material-icons login">login</li>
