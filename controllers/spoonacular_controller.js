@@ -18,4 +18,18 @@ router.post("/ingredients", function (req, res) {
     });
 });
 
+router.post("/recipes", function (req, res) {
+    const ingredients = req.body.ingredients;
+    const api_key = process.env.SPOONACULAR_API_KEY;
+    const ingredientsString = ingredients.join(',+');
+    axios
+      .get(
+        `https://api.spoonacular.com/recipes/findByIngredients/?ingredients=${ingredientsString}&apiKey=${api_key}`
+      )
+      .then((response) => {
+        const result = response.data;
+        res.json(result);
+    });
+});
+
 module.exports = router;
