@@ -5,9 +5,16 @@ function renderHeaderNav() {
     if (sessionInfo.data.userId) {
       //If logged in
       navbar.innerHTML = `
+// login
           <nav class="main__nav">
+         
+//
+          <h1>Fridge</h1>
+          <h1>Recipe Book</h1>
           <h1 class="main__headline">FeedMe<span class="material-icons restaurant">restaurant</span></h1>
+// master
             <ul>
+                <li> </li>
                 <li class="material-icons logout">logout</li>
             </ul>
           </nav>
@@ -15,8 +22,14 @@ function renderHeaderNav() {
     } else {
       //If not logged in
       navbar.innerHTML = `
+// login
           <nav class="main__nav">
-          <h1 class="main__headline">FeedMe<span class="material-icons restaurant">restaurant</span></h1>
+          
+//
+          
+           <h1>Fridge</h1>
+           <h1 class="main__headline">FeedMe<span class="material-icons restaurant">restaurant</span></h1>
+// master
             <ul>
                 <li class="material-icons login">login</li>
                 <li class="material-icons logout">logout</li>
