@@ -19,7 +19,8 @@ function renderHeaderNav() {
             <h1>Feed Me</h1>
             <ul>
                 <li class="material-icons login">login</li>
-                <li class="material-icons logout">sign up</li>
+                <li class="material-icons logout">logout</li>
+                <li class="material-icons note alt">sign up</li>
             </ul>
           </nav>
         `;
