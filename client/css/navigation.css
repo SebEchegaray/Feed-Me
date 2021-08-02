@@ -1,0 +1,64 @@
+/* MAIN NAV STARTS HERE */
+.main__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 2rem;
+  height: 7vh;
+  width: 100%;
+  color: #7F0000;
+  background: #D6CEC0;
+}
+.main__nav ul {
+  width: 15%;
+}
+.material-icons {
+  margin-right: 4rem;
+  font-size: 3.5rem;
+}
+.material-icons.restaurant {
+  position: relative;
+  top: 1rem;
+  font-size: 6rem;
+}
+
+.main__headline {
+  font-family: 'Fredoka One', cursive;
+  font-size: 5rem;
+  line-height: 8rem;
+}
+/* MAIN NAV ENDS HERE */
+
+@media only screen and (max-width: 130rem) {
+  .main__headline {
+    font-size: 3rem;
+  }
+
+  .material-icons {
+    margin-right: 2rem;
+    font-size: 2rem;
+  }
+  .material-icons.restaurant {
+    position: relative;
+    top: 0.5rem;
+    font-size: 3.5rem;
+  }
+}
+
+/* COLOR PALLET */
+/* 
+PRIMARY COLOR PALLET
+Dusty Rose: #AE8781
+Pewter: #8E8A92
+Cream: #D6CEC0
+Beige: #D6C099
+ */
+
+ /* 
+SECONDARY COLOR PALLET
+Burgundy: #7F0000
+Scarlet: #B32800
+Tangerine: #E9A200
+Gold: #FBDD00
+ */

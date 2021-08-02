@@ -27,8 +27,12 @@ app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
 
+app.use(logger);
+app.use(express.json());
+app.use(express.static("client"));
+
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World!")
 });
 
 app.use("/api/users/", usersController);
