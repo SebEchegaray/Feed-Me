@@ -6,7 +6,7 @@ function renderIngredientSearch() {
         <input name="search-query" type="text" id="search-query" />
         <button id="search-btn" type="submit">Search</button>
       </form>
-      <section id="search-results"></section>
+      <section class="search-results"></section>
     </section>
     `;
 }

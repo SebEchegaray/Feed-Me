@@ -5,18 +5,41 @@ function renderIngredientResults(event) {
   axios
     .post("/api/spoonacular/ingredients", data)
     .then((response) => {
-      document.querySelector("#search-results").innerHTML = response.data.map(
-        (result) => {
-          return `
-              <ul>
-                  <li data-id=${result.id}>${result.name}</li>
-              </ul>
-            `;
-        }
-      );
+      console.log(response);
+      document.querySelector(".search-results").innerHTML = `
+            <ul>
+                ${ingredientSearchResults(response.data)}
+            </ul>
+        `;
     })
     .catch((error) => {
       console.log(error.response);
       document.querySelector("#errors").innerHTML = error.response.data.message;
     });
+}
+
+function ingredientSearchResults(results) {
+  return results
+    .map(
+      (result) => `
+        <li>
+            <div data-id=${result.id} class="search-result">
+                <p>${result.name}</p>
+                <span class="material-icons" onClick="addIngredientToFridge(event)">add_circle_outline</span>
+                
+            </div>
+        </li>
+    `
+    )
+    .join("");
+}
+
+function addIngredientToFridge(event) {
+  const addButton = event.target;
+  const ingredientDom = addButton.closest(".search-result");
+  const ingredientId = ingredientDom.dataset.id;
+
+  console.log(ingredientId);
+
+  //  TODO: Add ingredient to state variable
 }
