@@ -1,0 +1,46 @@
+/* COLOR PALLET */
+/* 
+PRIMARY COLOR PALLET
+Dusty Rose: #AE8781
+Pewter: #8E8A92
+Cream: #D6CEC0
+Beige: #D6C099
+ */
+
+/* 
+SECONDARY COLOR PALLET
+Burgundy: #7F0000
+Scarlet: #B32800
+Tangerine: #E9A200
+Gold: #FBDD00
+ */
+
+.ingredient_search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.search-results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #d6cec0;
+}
+
+.search-results ul {
+  list-style-type: none;
+}
+
+.search-result {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.search-result .material-icons {
+  cursor: pointer;
+}

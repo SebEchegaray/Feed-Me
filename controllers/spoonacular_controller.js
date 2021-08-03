@@ -5,7 +5,7 @@ const router = express.Router();
 
 // Search Spoonacular Ingredients API
 router.post("/ingredients", function (req, res) {
-  const query = req.body.query;
+  const query = req.body["search-query"];
   const api_key = process.env.SPOONACULAR_API_KEY;
 
   axios
