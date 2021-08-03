@@ -39,7 +39,5 @@ function addIngredientToFridge(event) {
   const ingredientDom = addButton.closest(".search-result");
   const ingredientId = ingredientDom.dataset.id;
 
-  console.log(ingredientId);
-
-  //  TODO: Add ingredient to state variable
+  state.fridgeItems.push(Number(ingredientId));
 }
