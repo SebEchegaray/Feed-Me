@@ -22,13 +22,16 @@ router.post("/recipes", function (req, res) {
     const ingredients = req.body.ingredients;
     const api_key = process.env.SPOONACULAR_API_KEY;
     const ingredientsString = ingredients.join(',+');
+    console.log(req.body)
     axios
       .get(
-        `https://api.spoonacular.com/recipes/findByIngredients/?ingredients=${ingredientsString}&apiKey=${api_key}`
+        `https://api.spoonacular.com/recipes/findByIngredients/?ingredients=${ingredientsString}&apiKey=${api_key}&ranking=2`
       )
       .then((response) => {
         const result = response.data;
         res.json(result);
+    }).catch(error => {
+        console.log(error)
     });
 });
 
