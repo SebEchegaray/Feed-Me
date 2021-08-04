@@ -32,7 +32,9 @@ function renderHeaderNav() {
             <ul>
                 <li class="material-icons login" onClick="render('LoginForm')">login</li>
                 <li class="material-icons logout">logout</li>
+
                 <li class="material-icons subscriptions" onClick="render('SignUpForm')">subscriptions</li>
+
             </ul>
           </nav>
         `;
@@ -41,7 +43,6 @@ function renderHeaderNav() {
 }
 
 // render header nav on page load
-renderHeaderNav();
 
 renderHeaderNav()
 
@@ -52,3 +53,4 @@ function render(component) {
     renderSignUpForm()
   }
 }
+
