@@ -30,9 +30,9 @@ function renderHeaderNav() {
            <h1 class="main__headline">FeedMe<span class="material-icons restaurant">restaurant</span></h1>
 
             <ul>
-                <li class="material-icons login" onClick="render('SignUpForm')">login</li>
+                <li class="material-icons login" onClick="render('LoginForm')">login</li>
                 <li class="material-icons logout">logout</li>
-                <li class="material-icons subscriptions">subscriptions</li>
+                <li class="material-icons subscriptions" onClick="render('SignUpForm')">subscriptions</li>
             </ul>
           </nav>
         `;
@@ -42,3 +42,13 @@ function renderHeaderNav() {
 
 // render header nav on page load
 renderHeaderNav();
+
+renderHeaderNav()
+
+function render(component) {
+  if (component === 'LoginForm') {
+    renderLoginForm()
+  } else if (component === 'SignUpForm') {
+    renderSignUpForm()
+  }
+}
