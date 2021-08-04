@@ -1,17 +1,15 @@
-function renderRecipeResults(event) {
+function renderIndividualRecipe(event) {
     event.preventDefault();
-    const ingredientsArray = state.fridgeItems.map((ingredient) => {
-        return ingredient.name;
-    });
-    const data = { ingredients: ingredientsArray };
+    const id = 641803
+
     axios
-        .post("/api/spoonacular/recipes", data)
+        .get(`/api/spoonacular/recipes/${id}`)
         .then((response) => {
             console.log(response);
             document.querySelector("#page").innerHTML = `
                 <h1>Your Yummy Recipes</h1>
                 <ul>
-                    ${recipeResults(response.data)}
+                    ${recipeInformation(response.data)}
                 </ul>
             `;
         })
@@ -22,7 +20,7 @@ function renderRecipeResults(event) {
         });
 }
 
-function recipeResults(results) {
+function recipeInformation(results) {
     return results
         .map(
             (result) => `
