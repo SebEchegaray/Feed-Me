@@ -21,19 +21,43 @@ Gold: #FBDD00
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 25%;
+  margin: 0 auto;
   margin-top: 4rem;
 }
 
 .search-results {
   display: flex;
+  align-self: flex-start;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #d6cec0;
+  background-color: #D6C099;
+  width: 80%;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
-
 .search-results ul {
   list-style-type: none;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+.search-result p {
+  width: 100%;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.8rem;
+  transition: all 0.2s;
+  padding: 0 0.5rem;
+}
+.search-result span {
+  float: right;
+}
+.search-result p:hover {
+  transform: scale(1.05);
+  background: #E9A200;
+}
+.search-result {
+  display: flex;
+  justify-content: space-between;
 }
 
 .search-result {
@@ -56,15 +80,16 @@ Gold: #FBDD00
 .ingredient_search form {
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 100%;
 }
 #search-query {
   font-family: 'Rubik', sans-serif;
   font-size: 1.8rem;
-  width: 30%;
+  width: 80%;
   height: 3rem;
   margin-right: 0.5rem;
   padding: 0 1rem;
+  border: none;
 }
 #search-btn {
   padding: 0 2rem;

@@ -24,8 +24,7 @@ function ingredientSearchResults(results) {
       (result) => `
         <li>
             <div data-id=${result.id} class="search-result">
-                <p>${result.name}</p>
-                <span class="material-icons" onClick="addIngredientToFridge({id:${result.id}, name:'${result.name}', image:'https://spoonacular.com/cdn/ingredients_250x250/${result.image}'})">add_circle_outline</span>
+                <p onClick="addIngredientToFridge({id:${result.id}, name:'${result.name}', image:'https://spoonacular.com/cdn/ingredients_250x250/${result.image}'})">${result.name}<span class="material-icons">add_circle_outline</span></p>
                 
             </div>
         </li>
