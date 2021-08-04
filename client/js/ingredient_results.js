@@ -25,7 +25,7 @@ function ingredientSearchResults(results) {
         <li>
             <div data-id=${result.id} class="search-result">
                 <p>${result.name}</p>
-                <span class="material-icons" onClick="addIngredientToFridge(event)">add_circle_outline</span>
+                <span class="material-icons" onClick="addIngredientToFridge({id:${result.id}, name:'${result.name}', image:'https://spoonacular.com/cdn/ingredients_250x250/${result.image}'})">add_circle_outline</span>
                 
             </div>
         </li>
@@ -34,15 +34,15 @@ function ingredientSearchResults(results) {
     .join("");
 }
 
-function addIngredientToFridge(event) {
-  const addButton = event.target;
-  const ingredientDom = addButton.closest(".search-result");
-  const ingredientId = ingredientDom.dataset.id;
+function addIngredientToFridge(ingredient) {
+  state.fridgeItems.push(ingredient);
+  console.log(state.fridgeItems);
+  const recipeSearchSection = document.querySelector(".recipe_search");
 
-  state.fridgeItems.push(Number(ingredientId));
-  console.log(state.fridgeItems)
-  const recipeSearchSection = document.querySelector(".recipe_search")
-  recipeSearchSection.innerHTML = `
-    <button onClick="renderRecipeResults(event)" id="get-recipes" type="submit">Get Recipes!!</button>
-  `
+  // If there's an item in the fridge show the 'get recipes' button
+  if (state.fridgeItems.length > 0) {
+    recipeSearchSection.innerHTML = `
+      <button onClick="renderRecipeResults(event)" id="get-recipes" type="submit">Get Recipes!!</button>
+    `;
+  }
 }
