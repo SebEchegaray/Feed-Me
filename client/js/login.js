@@ -1,7 +1,7 @@
 function renderLoginForm() {
   document.querySelector("#page").innerHTML = `
     <section class="sign-up">
-      <h1>Sign Up</h1>
+      <h1>Login</h1>
       <form onSubmit="loginUser(event)">
         <section id="errors"></section>
         <fieldset>

@@ -16,11 +16,12 @@ Gold: #FBDD00
  */
 
 .ingredient_search {
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 
 .search-results {
@@ -43,4 +44,20 @@ Gold: #FBDD00
 
 .search-result .material-icons {
   cursor: pointer;
+}
+
+.ingredient_search h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+.ingredient_search form {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+#search-query {
+  width: 30%;
+  height: 3rem;
 }
