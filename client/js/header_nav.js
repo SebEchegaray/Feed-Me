@@ -30,7 +30,7 @@ function renderHeaderNav() {
            <h1 class="main__headline">FeedMe<span class="material-icons restaurant">restaurant</span></h1>
 
             <ul>
-                <li class="material-icons login">login</li>
+                <li class="material-icons login" onClick="render('SignUpForm')">login</li>
                 <li class="material-icons logout">logout</li>
                 <li class="material-icons subscriptions">subscriptions</li>
             </ul>

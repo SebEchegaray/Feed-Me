@@ -40,4 +40,9 @@ function addIngredientToFridge(event) {
   const ingredientId = ingredientDom.dataset.id;
 
   state.fridgeItems.push(Number(ingredientId));
+  console.log(state.fridgeItems)
+  const recipeSearchSection = document.querySelector(".recipe_search")
+  recipeSearchSection.innerHTML = `
+    <button onClick="renderRecipeResults(event)" id="get-recipes" type="submit">Get Recipes!!</button>
+  `
 }

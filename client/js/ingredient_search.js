@@ -8,6 +8,13 @@ function renderIngredientSearch() {
       </form>
       <section class="search-results"></section>
     </section>
+    <section class="display_ingredients">
+
+    </section>
+    <section class="recipe_search">
+        
+
+    </section>
     `;
 }
 
