@@ -26,7 +26,7 @@ function renderHeaderNav() {
           <nav class="main__nav">
           
           
-           <h1>Fridge</h1>
+           <h1 class="material-icons fridge" onClick= ></h1>
            <h1 class="main__headline">FeedMe<span class="material-icons restaurant">restaurant</span></h1>
 
             <ul>
