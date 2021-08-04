@@ -1,4 +1,4 @@
-function renderSignUpForm() {
+function renderLoginForm() {
   document.querySelector("#page").innerHTML = `
     <section class="sign-up">
       <h1>Sign Up</h1>
@@ -12,7 +12,7 @@ function renderSignUpForm() {
           <label for="password">Password:</label><br />
           <input type="password" name="password" id="password" />
         </fieldset>
-        <button id="sign-up-btn" type="submit">Sign Up!</button>
+        <button id="sign-up-btn" type="submit">Login!</button>
       </form>
   `;
 }
