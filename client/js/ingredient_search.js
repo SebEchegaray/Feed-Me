@@ -16,7 +16,25 @@ function renderIngredientSearch() {
         
 
     </section>
-    `;
+
+    <!-- Fridge Below -->
+    <section class="fridge">
+      <div class="first-shelf shelf"></div>
+      <div class="shelf"></div>
+      <div class="shelf"></div>
+      <div class="shelf"></div>
+      <div class="shelf"></div>
+      <div class="shelf"></div>
+      <div class="shelf"></div>
+      <div id="food"></div>
+      <!--<div class="freezer door">
+        <div class="handle"></div>
+      </div>-->
+      <div class="body door">
+        <div class="handle"></div>
+      </div>
+    </section>
+  `;
 }
 
 renderIngredientSearch();

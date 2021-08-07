@@ -31,7 +31,7 @@ function renderHeaderNav() {
 
             <ul>
                 <li class="material-icons login" onClick="render('LoginForm')">login</li>
-                <li class="material-icons logout">logout</li>
+                <!--<li class="material-icons logout">logout</li>-->
 
                 <li class="material-icons subscriptions" onClick="render('SignUpForm')">subscriptions</li>
 

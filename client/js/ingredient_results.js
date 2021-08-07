@@ -24,8 +24,7 @@ function ingredientSearchResults(results) {
       (result) => `
         <li>
             <div data-id=${result.id} class="search-result">
-                <p onClick="addIngredientToFridge({id:${result.id}, name:'${result.name}', image:'https://spoonacular.com/cdn/ingredients_250x250/${result.image}'})">${result.name}<span class="material-icons">add_circle_outline</span></p>
-                
+              <p onClick="addIngredientToFridge({id:${result.id}, name:'${result.name}', image:'https://spoonacular.com/cdn/ingredients_250x250/${result.image}'})">${result.name}<span class="material-icons">add_circle_outline</span></p>
             </div>
         </li>
     `
@@ -36,7 +35,18 @@ function ingredientSearchResults(results) {
 function addIngredientToFridge(ingredient) {
   state.fridgeItems.push(ingredient);
   console.log(state.fridgeItems);
+  
   const recipeSearchSection = document.querySelector(".recipe_search");
+  let shelves = document.querySelector('.first-shelf')
+  const door = document.querySelector('.door')
+  
+  const ingImage = document.createElement('img')
+  ingImage.src = `${ingredient.image}`
+  shelves.appendChild(ingImage)
+
+  if (state.fridgeItems.length > 0) {
+    door.classList.add('open-door')
+  }
 
   // If there's an item in the fridge show the 'get recipes' button
   if (state.fridgeItems.length > 0) {

@@ -1,0 +1,57 @@
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6rem auto 0;
+  padding: 4rem 0 5rem;
+  width: 35%;
+  border-radius: 3rem;
+  box-shadow: 0 0 2rem #FBDD00;
+}
+.sign-up h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  padding-left: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 1.5rem #7D7D7D;
+  color: #FFFFFF;
+}
+.sign-up form {
+  width: 50%;
+}
+.sign-up fieldset {
+  border: none;
+  margin-bottom: 1rem;
+}
+.sign-up label {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.5rem;
+  color: #E9A200;
+}
+.sign-up input {
+  padding-left: 0.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.sign-up button {
+  margin-top: 1rem;
+}
+
+/* COLOR PALLET */
+/* 
+PRIMARY COLOR PALLET
+Dusty Rose: #AE8781
+Pewter: #8E8A92
+Cream: #D6CEC0
+Beige: #D6C099
+ */
+
+/* 
+SECONDARY COLOR PALLET
+Burgundy: #7F0000
+Scarlet: #B32800
+Tangerine: #E9A200
+Gold: #FBDD00
+ */

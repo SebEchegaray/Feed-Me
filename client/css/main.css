@@ -8,6 +8,18 @@ body {
   background: #7F0000;
 }
 
+input {
+  border-radius: 0.5rem;
+  border: none;
+  height: 3rem;
+}
+button {
+  padding: 0.75rem 2rem;
+  background: #D6C099;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem #FFFFFF;
+}
 
 /* COLOR PALLET */
 /* 
