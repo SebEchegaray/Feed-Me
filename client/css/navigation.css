@@ -24,6 +24,8 @@
 }
 
 .main__headline {
+  position: relative;
+  margin: 0 auto;
   font-family: 'Fredoka One', cursive;
   font-size: 5rem;
   line-height: 8rem;

@@ -33,7 +33,8 @@ Gold: #FBDD00
   justify-content: center;
   flex-direction: column;
   background-color: #D6C099;
-  width: 80%;
+  min-width: 80%;
+  margin-left: 2rem;
   border-radius: 0 0 1.5rem 1.5rem;
 }
 .search-results ul {
@@ -45,6 +46,7 @@ Gold: #FBDD00
   width: 100%;
   font-family: 'Rubik', sans-serif;
   font-size: 1.8rem;
+  line-height: 1.8rem;
   transition: all 0.2s;
   padding: 0 0.5rem;
 }
@@ -86,7 +88,6 @@ Gold: #FBDD00
   font-family: 'Rubik', sans-serif;
   font-size: 1.8rem;
   width: 80%;
-  height: 3rem;
   margin-right: 0.5rem;
   padding: 0 1rem;
   border: none;
