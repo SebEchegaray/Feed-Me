@@ -1,55 +1,57 @@
 .fridge {
-  position: relative;
-  width: 60rem;
-  margin: 7rem auto 20rem;
-  height: auto;
-  border: 0.4rem solid #555455;
-  background: #FFFFFF;
-  display: block;
-  overflow: hidden;
-  border-radius: 2rem;
-  background-image: url('https://envato-shoebox-0.imgix.net/a083/e2e2-bc37-457c-a716-2a6f219ba4a2/View+from+inside+of+an+empty+fridge+with+closed+door.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=700&s=d4b8ecad327bb0f8a99cb015e46ec5c6');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    position: relative;
+    width: 60rem;
+    margin: 7rem auto 20rem;
+    height: auto;
+    border: 0.4rem solid #555455;
+    background: #ffffff;
+    display: block;
+    overflow: hidden;
+    border-radius: 2rem;
+    background-image: url("https://envato-shoebox-0.imgix.net/a083/e2e2-bc37-457c-a716-2a6f219ba4a2/View+from+inside+of+an+empty+fridge+with+closed+door.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=700&s=d4b8ecad327bb0f8a99cb015e46ec5c6");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-.fridge::before, .fridge::after {
-  position: absolute;
-  content: '';
-  width: 0.8rem;
-  height: 0;
-  bottom: -0.8rem;
-  border: 0.45rem solid transparent;
-  border-top-color: #555455;
-  border-bottom-width: 0;
+.fridge::before,
+.fridge::after {
+    position: absolute;
+    content: "";
+    width: 0.8rem;
+    height: 0;
+    bottom: -0.8rem;
+    border: 0.45rem solid transparent;
+    border-top-color: #555455;
+    border-bottom-width: 0;
 }
 .fridge::before {
-  left: 1.4rem;
+    left: 1.4rem;
 }
 .fridge:after {
-  right: 1.4rem;
-  /* box-shadow: 0 -40.5rem 0 0.1rem #555455; */
+    right: 1.4rem;
+    /* box-shadow: 0 -40.5rem 0 0.1rem #555455; */
 }
-.fridge .freezer, .fridge .body {
-  position: relative;
-  background: #D7E4E7;
-  background-image: linear-gradient(to right, #96A4AA 25%, #B3C5CD 15%);
-  transform-origin: right;
-  transition: all 0.5s ease-in-out;
+.fridge .freezer,
+.fridge .body {
+    position: relative;
+    background: #d7e4e7;
+    background-image: linear-gradient(to right, #96a4aa 25%, #b3c5cd 15%);
+    transform-origin: right;
+    transition: all 0.5s ease-in-out;
 }
 .fridge .freezer::before,
 .fridge .body::before,
 .fridge .freezer::after,
 .fridge .body::after {
-  position: absolute;
-  content: '';
-  top: 0.7rem;
-  right: 1rem;
-  width: 0.5rem;
-  height: 4.5rem;
-  border-radius: 0.5rem;
-  background: #FFFFFF;
-  transition: all 0.5s ease-in-out;
+    position: absolute;
+    content: "";
+    top: 0.7rem;
+    right: 1rem;
+    width: 0.5rem;
+    height: 4.5rem;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    transition: all 0.5s ease-in-out;
 }
 /* .fridge .freezer {
   height: 30rem;
@@ -59,87 +61,90 @@
   top: 2rem;
 } */
 .fridge .body {
-  height: 85rem;
-  border-radius: 2rem;
+    height: 85rem;
+    border-radius: 2rem;
 }
 .fridge .body::before {
-  top: 6.2rem;
-  height: auto;
-  bottom: 0.7rem;
+    top: 6.2rem;
+    height: auto;
+    bottom: 0.7rem;
 }
 .fridge .body .handle {
-  top: 2rem;
-  bottom: 17rem;
+    top: 2rem;
+    bottom: 17rem;
 }
 .handle {
-  position: absolute;
-  top: 0;
-  bottom: 1.5rem;
-  left: 3.5rem;
-  width: 1rem;
-  border: 0.3rem solid #555455;
-  border-radius: 0.5rem;
-  background: #71B5E6;
-  box-sizing: content-box;
-  transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 1.5rem;
+    left: 3.5rem;
+    width: 1rem;
+    border: 0.3rem solid #555455;
+    border-radius: 0.5rem;
+    background: #71b5e6;
+    box-sizing: content-box;
+    transition: all 0.5s ease-in-out;
 }
 .open-door {
-  transform: perspective(12rem) translate(0px) rotateY(120deg);
+    transform: perspective(12rem) translate(0px) rotateY(120deg);
 }
-.open-door .handle, .open-door::before, .open-door::after {
-  opacity: 0;
+.open-door .handle,
+.open-door::before,
+.open-door::after {
+    opacity: 0;
 }
 #food {
-  position: absolute;
-  z-index: 0;
-  padding: 1rem;
-  height: 17.5rem;
-  overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    padding: 1rem;
+    height: 17.5rem;
+    overflow: hidden;
 }
 #food img {
-  max-width: 2rem;
-  max-height: 1.5rem;
+    max-width: 2rem;
+    max-height: 1.5rem;
 }
 .shelf {
-  position: absolute;
-  width: 100%;
-  height: 10rem;
-  z-index: 0;
-  border-bottom: 1rem solid #B3C5CD;
-  border-left: 0.5rem solid transparent;
-  border-right: 0.5rem solid transparent;
-  top: 3.5rem;
+    position: absolute;
+    width: 100%;
+    height: 10rem;
+    z-index: 0;
+    /* border-bottom: 0.5rem solid #b3c5cd; */
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    top: 3.5rem;
 }
 .shelf img {
-  max-width: 20rem;
-  max-height: 100%;
-  margin-bottom: 3.5rem;
+    max-width: 20rem;
+    max-height: 100%;
+    margin-bottom: 1rem;
+    margin-right: 5px;
 }
 .shelf::after {
-  content: '';
-  height: 0.5rem;
-  width: 17.2rem;
-  position: absolute;
-  top: 1rem;
-  left: 1.5rem;
-  right: 0;
-  margin: 0 -2rem;
+    content: "";
+    height: 0.5rem;
+    width: 17.2rem;
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    right: 0;
+    margin: 0 -2rem;
 }
 .shelf:nth-child(2) {
-  top: 15rem;
+    top: 15rem;
 }
 .shelf:nth-child(3) {
-  top: 27rem;
+    top: 27rem;
 }
 .shelf:nth-child(4) {
-  top: 37rem;
+    top: 37rem;
 }
 .shelf:nth-child(5) {
-  top: 47rem;
+    top: 47rem;
 }
 .shelf:nth-child(6) {
-  top: 57rem;
+    top: 57rem;
 }
 .shelf:nth-child(7) {
-  top: 67rem;
+    top: 67rem;
 }
