@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background: #8E8A92;
+  background: #7F0000;
 }
 
 input {
@@ -19,6 +19,8 @@ button {
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem #FFFFFF;
+  font-size: 2rem;
+  color: #FFFFFF;
 }
 
 /* COLOR PALLET */
