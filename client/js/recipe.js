@@ -28,9 +28,7 @@ function renderIndividualRecipe(event) {
                         )}
                     </div>
                     <h2>Instructions</h2>
-                    <ol>
-                        <li>${response.data.instructions}</li>
-                    </ol>
+                    ${renderInstructionLink(response.data)}
                 </div>
             `;
         })
@@ -55,6 +53,14 @@ function renderRecipeIngredients(ingredients) {
         .join("");
 }
 
-// function instructionLink() {
-//     if
-// }
+function renderInstructionLink(recipe) {
+    if (recipe.instructions) {
+        return `
+            <p>${recipe.instructions}</p>
+        `;
+    } else {
+        return `
+            <a href="${recipe.sourceUrl}">Read the detailed instructions on ${recipe.sourceName}</a>
+        `;
+    }
+}
