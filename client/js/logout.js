@@ -1,9 +1,7 @@
-function logoutUser(event) {
-  event.preventDefault();
-
+function logoutUser(event) { 
   axios
-    .delete("/api/sessions", data)
-    .then((response) => {
+    .delete("/api/sessions")
+    .then(() => {
       window.location = "/";
     })
 }
