@@ -1,5 +1,4 @@
 .fridge {
-<<<<<<< HEAD
     position: relative;
     width: 60rem;
     margin: 7rem auto 20rem;
@@ -24,31 +23,6 @@
     border: 0.45rem solid transparent;
     border-top-color: #555455;
     border-bottom-width: 0;
-=======
-  position: relative;
-  width: 60rem;
-  margin: 7rem auto 20rem;
-  height: auto;
-  border: 0.4rem solid #555455;
-  background: #FFFFFF;
-  display: block;
-  overflow: hidden;
-  border-radius: 2rem;
-  /* background-image: url('https://envato-shoebox-0.imgix.net/a083/e2e2-bc37-457c-a716-2a6f219ba4a2/View+from+inside+of+an+empty+fridge+with+closed+door.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=700&s=d4b8ecad327bb0f8a99cb015e46ec5c6');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-}
-.fridge::before, .fridge::after {
-  position: absolute;
-  content: '';
-  width: 0.8rem;
-  height: 0;
-  bottom: -0.8rem;
-  border: 0.45rem solid transparent;
-  border-top-color: #555455;
-  border-bottom-width: 0;
->>>>>>> Final Fridge css
 }
 .fridge::before {
     left: 1.4rem;
