@@ -8,14 +8,17 @@ CREATE TABLE users(
     password_digest TEXT
 );
 
--- CREATE TABLE recipes(
---     id SERIAL PRIMARY KEY,
---     name TEXT,
---     img_url
---     api_id INT,
---     notes,
---     rating,
--- );
+CREATE TABLE recipes(
+    id SERIAL PRIMARY KEY,
+    user_id INT,
+    name TEXT,
+    spoonacular_id INT,
+    notes,
+    rating,
+    CONSTRAINT fk_user
+      FOREIGN KEY(user_id) 
+	  REFERENCES users(user_id)
+);
 
 -- CREATE TABLE fridge_items(
 --     id SERIAL PRIMARY KEY,
