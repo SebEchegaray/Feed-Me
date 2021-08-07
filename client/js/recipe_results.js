@@ -27,7 +27,7 @@ function recipeResults(results) {
         .map(
             (result) => `
           <li>
-              <div data-id=${result.id} class="search-result">
+              <div onClick="renderIndividualRecipe(event)" data-id=${result.id} class="recipe_search">
                   <p>${result.title}</p>
                   <img src="${result.image}" alt="">
                   
@@ -35,5 +35,18 @@ function recipeResults(results) {
           </li>
         `
         )
-        .join(",+");
+        .join("");
 }
+
+// function addIngredientToFridge(recipe) {
+//     state.recipeBookRecipes.push(recipe);
+//     console.log(state.recipeBookRecipes);
+//     const recipeSearchSection = document.querySelector(".recipe_search");
+  
+//     // If there's an item in the fridge show the 'get recipes' button
+//     if (state.recipeBookRecipes.length > 0) {
+//       recipeSearchSection.innerHTML = `
+//         <button onClick="renderRecipeResults(event)" id="get-recipes" type="submit">Get Recipes!!</button>
+//       `;
+//     }
+// }

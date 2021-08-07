@@ -35,4 +35,21 @@ router.post("/recipes", function (req, res) {
     });
 });
 
+router.get("/recipes/:recipeId", function (req, res) {
+    const id = req.params.recipeId
+    const api_key = process.env.SPOONACULAR_API_KEY;
+
+    console.log(id)
+    axios
+      .get(
+        `https://api.spoonacular.com/recipes/${id}/information?apiKey=${api_key}`
+      )
+      .then((response) => {
+        const result = response.data;
+        res.json(result);
+    }).catch(error => {
+        console.log(error)
+    });
+});
+
 module.exports = router;
