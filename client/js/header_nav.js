@@ -1,10 +1,10 @@
 function renderHeaderNav() {
-  // Make a get request to the backend API to check if the user is logged in
-  axios.get("/api/sessions").then((sessionInfo) => {
-    const navbar = document.querySelector("#header-nav");
-    if (sessionInfo.data.userId) {
-      //If logged in
-      navbar.innerHTML = `
+    // Make a get request to the backend API to check if the user is logged in
+    axios.get("/api/sessions").then((sessionInfo) => {
+        const navbar = document.querySelector("#header-nav");
+        if (sessionInfo.data.userId) {
+            //If logged in
+            navbar.innerHTML = `
 
           <nav class="main__nav">
          
@@ -19,14 +19,14 @@ function renderHeaderNav() {
             </ul>
           </nav>
         `;
-    } else {
-      //If not logged in
-      navbar.innerHTML = `
+        } else {
+            //If not logged in
+            navbar.innerHTML = `
 
           <nav class="main__nav">
           
           
-           <h1 class="material-icons fridge" onClick= ></h1>
+           <h1 class="material-icons kitchen" onClick="render('IngredientSearch')">kitchen</h1>
            <h1 class="main__headline">FeedMe<span class="material-icons restaurant">restaurant</span></h1>
 
             <ul>
@@ -38,19 +38,20 @@ function renderHeaderNav() {
             </ul>
           </nav>
         `;
-    }
-  });
+        }
+    });
 }
 
 // render header nav on page load
 
-renderHeaderNav()
+renderHeaderNav();
 
 function render(component) {
-  if (component === 'LoginForm') {
-    renderLoginForm()
-  } else if (component === 'SignUpForm') {
-    renderSignUpForm()
-  }
+    if (component === "LoginForm") {
+        renderLoginForm();
+    } else if (component === "SignUpForm") {
+        renderSignUpForm();
+    } else if (component === "IngredientSearch") {
+        renderIngredientSearch();
+    }
 }
-
